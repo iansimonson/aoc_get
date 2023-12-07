@@ -8,9 +8,7 @@ import "shared:odin-http/client"
 
 
 main :: proc() {
-    fmt.println("here")
     assert(len(os.args) > 2)
-    fmt.println("yay")
     session_token := os.args[1]
     day := os.args[2]
 
@@ -38,9 +36,6 @@ get :: proc(token, year, day: string) {
         return
     }
 
-    fmt.printf("Status: %s\n", res.status)
-    fmt.printf("Headers: %v\n", res.headers)
-    fmt.printf("Cookies: %v\n", res.cookies)
     body, alloc, berr := client.response_body(&res)
     if berr != nil {
         fmt.printf("Error getting body: %s", berr)
