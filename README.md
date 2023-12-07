@@ -5,6 +5,8 @@ build with `odin build .`
 
 run with `./aoc_get.exe <your session token> <day> [year]`
 
+pipe stdout to the file of your choice to have your input
+
 will default to 2023 if you don't specify year
 
 ## Dependencies:
